@@ -1,3 +1,41 @@
+# Example-Appium-Framework
+
+## Description ##
+Complete automation framework, ready to add tests to be run on iOS or Android mobile devices.
+
+## Pre-requisites ##
+Following needs to be installed on the machine
+
+* Mac OS
+* HomeBrew
+* Appium
+* ideviceinstaller
+* Xcode
+* Xcode command line tools
+* Gradle
+* Node
+* IntelliJ or Eclipse
+* Java
+* Android studio
+
+### Installing Xcode command line tools ###
+
+Open terminal and run the command below:
+
+xcode-select –install
+
+### Installing HomeBrew ###
+
+Run the command below:
+
+`ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)`
+
+Then update brew using the command below:
+
+brew update
+
+### Installing node ###
+
 Run the command below:
 
 `brew install node`
