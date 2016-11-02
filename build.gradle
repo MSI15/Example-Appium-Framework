@@ -1,0 +1,75 @@
+/* This is gradle build script
+ * for runnning the Project
+ */
+group 'Example-Appium-Framework'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+//sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.53'
+    compile group: 'io.appium', name: 'java-client', version: '4.1.2'
+    compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.4'
+    compile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.4'
+    compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.4'
+    compile group: 'org.springframework', name: 'spring-core', version: '4.3.0.RELEASE'
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    compile group: 'org.json', name: 'json' , version: '20160810'
+}
+
+// configure cucumber to be part of runtime test
+configurations {
+    cucumberRuntime {
+        extendsFrom testRuntime
+    }
+}
+
+/* Run this task to execute automated tests on a local machine  --    gradle clean testLocal
+ * @applicationPath : Set path to apk or ipa/app file
+ * @device : android or ios
+ * @applicationPackage : app package or bundleID
+ * @androidEmulator : Emulator name or no
+ * To run test on the basis of tags : @tagName
+ * To ignore test on the basis of tags: ~@tagName
+*/
+task testLocal() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        println 'Running Tests locally'
+       javaexec {
+           println 'Test'
+            //println()
+           systemProperty 'applicationPath' , 'settings'//System.getProperty('user.home') + 'Downloads/SkyNewsDev.app'
+           systemProperty 'device', 'ios'
+           systemProperty 'applicationPackage', ''
+           systemProperty 'testDeviceName', 'Tab3- 10inch'
+           systemProperty 'testDeviceVersion', '4.4.2'
+           systemProperty 'androidEmulator', 'no'
+           systemProperty 'emulatorVersion', 'no'
+           systemProperty 'iOSDevice', 'no'
+           systemProperty 'defaultiOSDevice', 'no'
+           systemProperty 'iOSSimulator', 'iPhone 6'
+           systemProperty 'iOSSimulatorVersion', '9.3'
+
+           main = "cucumber.api.cli.Main"
+           classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+           args = ['--plugin', 'pretty', '--plugin', 'html:reports/html-report/ios', '--glue', 'com.sky.sdc.mobile.stepDefs', 'src/test/resources/com/sky/sdc/mobile', '--tags', '@example', '--tags', '@ios' ]
+
+       }
+    }
+}

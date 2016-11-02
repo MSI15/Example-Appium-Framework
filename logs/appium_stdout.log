@@ -1,0 +1,53 @@
+2016-11-01 17:12:29 INFO  Hooks:31 - Driver is null. Creating iOS driver
+2016-11-01 17:12:29 INFO  AppiumManager:66 - appium --session-override -p 54639 --chromedriver-port 54640 -bp 54641
+2016-11-01 17:12:32 INFO  AppiumManager:68 - [Appium] Welcome to Appium v1.6.0
+[Appium] Non-default server args:
+[Appium]   port: 54639
+[Appium]   bootstrapPort: 54641
+[Appium]   sessionOverride: true
+[Appium]   chromeDriverPort: 54640
+[Appium] Appium REST http interface listener started on 0.0.0.0:54639
+
+2016-11-01 17:12:32 INFO  CreateDriver:131 - Launching simulator
+2016-11-01 17:12:32 INFO  CreateDriver:132 - iPhone 6
+2016-11-01 17:12:32 INFO  CreateDriver:133 - 9.3
+2016-11-01 17:13:00 INFO  ExampleStepDef:32 - Testing
+2016-11-01 17:31:57 INFO  Hooks:31 - Driver is null. Creating iOS driver
+2016-11-01 17:31:57 INFO  AppiumManager:66 - appium --session-override -p 54879 --chromedriver-port 54880 -bp 54881
+2016-11-01 17:31:59 INFO  AppiumManager:68 - [Appium] Welcome to Appium v1.6.0
+[Appium] Non-default server args:
+[Appium]   port: 54879
+[Appium]   bootstrapPort: 54881
+[Appium]   sessionOverride: true
+[Appium]   chromeDriverPort: 54880
+[Appium] Appium REST http interface listener started on 0.0.0.0:54879
+
+2016-11-01 17:31:59 INFO  CreateDriver:131 - Launching simulator
+2016-11-01 17:31:59 INFO  CreateDriver:132 - iPhone 6
+2016-11-01 17:31:59 INFO  CreateDriver:133 - 9.3
+2016-11-02 12:36:54 INFO  Hooks:31 - Driver is null. Creating iOS driver
+2016-11-02 12:36:54 INFO  AppiumManager:66 - appium --session-override -p 52087 --chromedriver-port 52088 -bp 52089
+2016-11-02 12:36:57 INFO  AppiumManager:68 - [Appium] Welcome to Appium v1.6.0
+[Appium] Non-default server args:
+[Appium]   port: 52087
+[Appium]   bootstrapPort: 52089
+[Appium]   sessionOverride: true
+[Appium]   chromeDriverPort: 52088
+[Appium] Appium REST http interface listener started on 0.0.0.0:52087
+
+2016-11-02 12:36:57 INFO  CreateDriver:131 - Launching simulator
+2016-11-02 12:36:57 INFO  CreateDriver:132 - iPhone 6
+2016-11-02 12:36:57 INFO  CreateDriver:133 - 9.3
+2016-11-02 12:38:07 INFO  Hooks:31 - Driver is null. Creating iOS driver
+2016-11-02 12:38:07 INFO  AppiumManager:66 - appium --session-override -p 52158 --chromedriver-port 52159 -bp 52160
+2016-11-02 12:38:10 INFO  AppiumManager:68 - [Appium] Welcome to Appium v1.6.0
+[Appium] Non-default server args:
+[Appium]   port: 52158
+[Appium]   bootstrapPort: 52160
+[Appium]   sessionOverride: true
+[Appium]   chromeDriverPort: 52159
+[Appium] Appium REST http interface listener started on 0.0.0.0:52158
+
+2016-11-02 12:38:10 INFO  CreateDriver:131 - Launching simulator
+2016-11-02 12:38:10 INFO  CreateDriver:132 - iPhone 6
+2016-11-02 12:38:10 INFO  CreateDriver:133 - 9.3
